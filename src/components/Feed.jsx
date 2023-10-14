@@ -27,6 +27,8 @@ const Feed = () => (
         </p>
       </Typography>
     </Box>
+
+    
   </Stack>
 );
 

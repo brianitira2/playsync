@@ -1,10 +1,33 @@
-import React from 'react'
+import React from "react";
+import { Stack } from "@mui/material";
 
-const Sidebar = () => {
-  return (
-    <div>Sidebar</div>
-  )
-}
+import { categories } from "../utils/constants";
 
-export default Sidebar
+const selectedCategory = "New";
 
+const Sidebar = () => (
+  <Stack
+    direction="row"
+    sx={{
+      overflow: "auto",
+      height: { sx: "auto", md: "90%" },
+      flexDirection: { md: "column" },
+    }}
+  >
+    {categories.map((category) => (
+      <button
+        className="category-btn"
+        style={{
+          background: category.name === selectedCategory && "green",
+          color: "white",
+        }}
+        key={category.name}
+      >
+        <span style={{color: category.name === selectedCategory && 'white', marginRight: '45px'}}>{category.icon}</span>
+        <span>{category.name}</span>
+      </button>
+    ))}
+  </Stack>
+);
+
+export default Sidebar;
