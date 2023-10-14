@@ -1,12 +1,11 @@
-const axios = require('axios');
+import axios from "axios";
+
+
+const BASE_URL = 'https://youtube-v31.p.rapidapi.com';
 
 const options = {
-  method: 'GET',
-  url: 'https://youtube-v31.p.rapidapi.com/search',
+  url: BASE_URL,
   params: {
-    relatedToVideoId: '7ghhRHRP6t4',
-    part: 'id,snippet',
-    type: 'video',
     maxResults: '50'
   },
   headers: {
@@ -15,9 +14,7 @@ const options = {
   }
 };
 
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
+export const fetchFromApi = async (url) => {
+  const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+  return data;
 }
