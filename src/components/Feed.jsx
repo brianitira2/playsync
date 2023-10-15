@@ -8,7 +8,7 @@ import { fetchFromApi } from "../utils/Api";
 
 const Feed = () => {
 
-  const [selectedCategory, setSelectedCategory] = useState('Movie')
+  const [selectedCategory, setSelectedCategory] = useState('Films')
   const [videos, setVideos] = useState([])
 
   useEffect(() => {

@@ -19,23 +19,23 @@ export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 
 
 export const categories = [
-  { name: 'New', icon: <HomeIcon />, },
-  { name: 'JS Mastery', icon: <CodeIcon />, },
+  { name: 'Trends', icon: <HomeIcon />, },
+  { name: 'Hacking', icon: <CodeIcon />, },
   { name: 'Fighting', icon: <CodeIcon />, },
-  { name: 'ReactJS', icon: <CodeIcon />, },
-  { name: 'NextJS', icon: <CodeIcon />, },
-  { name: 'Music', icon: <MusicNoteIcon /> },
-  { name: 'Education', icon: <SchoolIcon />, },
-  { name: 'Podcast', icon: <GraphicEqIcon />, },
-  { name: 'Movie', icon: <OndemandVideoIcon />, },
-  { name: 'Gaming', icon: <SportsEsportsIcon />, },
-  { name: 'Live', icon: <LiveTvIcon />, },
-  { name: 'Sport', icon: <FitnessCenterIcon />, },
+  { name: 'Computer Science', icon: <CodeIcon />, },
+  { name: 'Memes', icon: <CodeIcon />, },
+  { name: 'Beats', icon: <MusicNoteIcon /> },
+  { name: 'Trending Kenya', icon: <SchoolIcon />, },
+  { name: 'Tiktok Trends', icon: <GraphicEqIcon />, },
+  { name: 'Films', icon: <OndemandVideoIcon />, },
+  { name: 'ROG', icon: <SportsEsportsIcon />, },
+  { name: 'Amapiano', icon: <LiveTvIcon />, },
+  { name: 'Football', icon: <FitnessCenterIcon />, },
   { name: 'Fashion', icon: <CheckroomIcon />, },
-  { name: 'Beauty', icon: <FaceRetouchingNaturalIcon />, },
-  { name: 'Comedy', icon: <TheaterComedyIcon />, },
-  { name: 'Gym', icon: <FitnessCenterIcon />, },
-  { name: 'Crypto', icon: <DeveloperModeIcon />, },
+  { name: 'Latest Movies', icon: <FaceRetouchingNaturalIcon />, },
+  { name: 'Entertainment', icon: <TheaterComedyIcon />, },
+  { name: 'Ass Shaking', icon: <FitnessCenterIcon />, },
+  { name: 'Technology', icon: <DeveloperModeIcon />, },
 ];
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';

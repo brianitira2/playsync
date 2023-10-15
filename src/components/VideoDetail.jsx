@@ -11,11 +11,10 @@ const VideoDetail = () => {
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
-    // Fetch video details
+    
     fetchFromApi(`videos?part=snippet,statistics&id=${id}`)
       .then((data) => setVideoDetail(data.items[0]));
 
-    // Fetch related videos
     fetchFromApi(`search?part=snippet&relatedToVideoId=${id}&type=video`)
       .then((data) => setVideos(data.items));
   }, [id]);

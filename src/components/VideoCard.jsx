@@ -20,12 +20,10 @@ const VideoCard = ({
   return (
     <Card
       sx={{
-        maxWidth: 400,
         margin: "auto",
         height: "100%",
         display: "flex",
         flexDirection: "column",
-      
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
