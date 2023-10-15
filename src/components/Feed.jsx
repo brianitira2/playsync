@@ -34,19 +34,15 @@ const Feed = () => {
     setSelectedCategory={setSelectedCategory} 
     />
 
-    <Typography
-      className="copyright"
-      variant="body2"
-      sx={{ mt: 1.5, color: "#fff" }}
-    >
-      <p>
-        © 2023 StreamPulse - Elevating Your Video Experience. 
-        <br />
-        All Rights
-        Reserved.
-        Created by Brian Itira
-      </p>
-    </Typography>
+<Typography
+   className="copyright"
+   variant="body2"
+   sx={{ mt: 1.5, color: "#fff" }}
+ >
+   © 2023 StreamPulse - Elevating Your Video Experience. <br></br>
+   All Rights Reserved. Created by Brian Itira
+ </Typography>
+
   </Box>
 
   <Box p={2} sx={{flex: 2, height: '90vh', overflowY: 'auto'}}>
