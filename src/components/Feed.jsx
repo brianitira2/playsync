@@ -40,9 +40,10 @@ const Feed = () => {
       sx={{ mt: 1.5, color: "#fff" }}
     >
       <p>
-        © 2023 StreamPulse - Elevating Your Video Experience. All Rights
-        Reserved.
+        © 2023 StreamPulse - Elevating Your Video Experience. 
         <br />
+        All Rights
+        Reserved.
         Created by Brian Itira
       </p>
     </Typography>
