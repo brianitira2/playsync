@@ -11,7 +11,6 @@ const VideoDetail = () => {
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
-    
     fetchFromApi(`videos?part=snippet,statistics&id=${id}`)
       .then((data) => setVideoDetail(data.items[0]));
 
@@ -20,13 +19,13 @@ const VideoDetail = () => {
   }, [id]);
 
   return (
-    <Grid container>
-      <Grid item xs={12} sm={12} md={6} >
-        <Box width="100%" maxWidth="1000px">
+    <Grid container spacing={3}>
+      <Grid item xs={12} md={6}>
+        <Box width="100%" maxWidth="800px" margin="0 auto">
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${id}`}
             width="100%"
-            height="700px"
+            height="auto"
             controls={true}
             config={{
               youtube: {
@@ -40,21 +39,21 @@ const VideoDetail = () => {
           />
         </Box>
       </Grid>
-      <Grid item xs={12} sm={12} md={6} margin='0 auto'>
+      <Grid item xs={12} md={6}>
         {videoDetail && (
-          <Paper elevation={3} sx={{ p: 2, backgroundColor: 'white', borderRadius: '8px' }}>
-            <Typography variant="h5">{videoDetail.snippet.title}</Typography>
-            <Typography variant="body2">{videoDetail.snippet.description}</Typography>
+          <Paper elevation={3} sx={{ p: 2, backgroundColor: '#f0f0f0', borderRadius: '8px', padding: '20px' }}>
+            <Typography variant="h5" style={{ color: '#333' }}>
+              {videoDetail.snippet.title}
+            </Typography>
+            <Typography variant="body2" style={{ color: '#666' }}>
+              {videoDetail.snippet.description}
+            </Typography>
           </Paper>
         )}
       </Grid>
-      <Box sx={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Grid container spacing={-1}>
-          <Grid item xs={12} sm={8} md={9} margin='0 auto'>
-            <Videos videos={videos}/>
-          </Grid>
-        </Grid>
-      </Box>
+      <Grid item xs={12}>
+        <Videos videos={videos} />
+      </Grid>
     </Grid>
   );
 };
