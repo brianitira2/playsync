@@ -1,50 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import Videos from './Videos';
 import { fetchFromApi } from '../utils/Api';
-import { Stack, Box } from '@mui/material';
 import { useParams } from 'react-router-dom';
-import YouTube from 'react-youtube';
+import ReactPlayer from 'react-player';
+import { Box, Typography, Paper } from '@mui/material';
 
 const VideoDetail = () => {
   const { id } = useParams();
   const [videoDetail, setVideoDetail] = useState(null);
-  const [videoUrl, setVideoUrl] = useState('');
 
   useEffect(() => {
     fetchFromApi(`videos?part=snippet,statistics&id=${id}`)
-      .then((data) => {
-        setVideoDetail(data.items[0]);
-        setVideoUrl(data.items[0].snippet.videoUrl);
-      });
+      .then((data) => setVideoDetail(data.items[0]));
   }, [id]);
 
-  const handleDownloadButtonClick = async () => {
-    const response = await fetch(videoUrl);
-    const blob = await response.blob();
-
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = `${videoDetail.snippet.title}.mp4`;
-    link.click();
-  };
-
   return (
-    <Box minHeight="95vh">
-      <Stack direction={{ xs: 'column', md: 'row' }}>
-        <Box sx={{ width: '100%' }}>
-          <YouTube
-            videoId={id}
-            opts={{
-              playerVars: {
-                controls: 0,
-                modestbranding: 1,
-                showinfo: 0,
+    <Box minHeight="95vh" display="flex" flexDirection="column">
+      <Box mt={2} flex="1" display="flex" position='sticky'>
+        <div style={{ width: '100%', maxWidth: '900px' }}>
+          <ReactPlayer
+            url={`https://www.youtube.com/watch?v=${id}`}
+            width="100%"
+            height="100%"
+            controls={true}
+            config={{
+              youtube: {
+                playerVars: {
+                  controls: 0,
+                  modestbranding: 1,
+                  showinfo: 0,
+                },
               },
             }}
           />
-        </Box>
-      </Stack>
-      <button onClick={handleDownloadButtonClick}>Download Video</button>
+        </div>
+      </Box>
+      <Box mt={-0.1} flex="1" maxWidth="900px" >
+        {videoDetail && (
+          <Paper elevation={3} sx={{ p: 2, color: 'green' }}>
+            <Typography variant="h5">{videoDetail.snippet.title}</Typography>
+            <Typography variant="body2">{videoDetail.snippet.description}</Typography>
+          </Paper>
+        )}
+      </Box>
     </Box>
   );
 };
