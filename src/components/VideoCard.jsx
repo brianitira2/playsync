@@ -20,21 +20,17 @@ const VideoCard = ({
   return (
     <Card
       sx={{
+        margin: "auto",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
-        marginBottom: 16, // Add margin to separate cards
-        maxWidth: "100%", // Allow the card to take full width
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
-          sx={{
-            width: "100%",
-            paddingTop: "56.25%",
-            objectFit: "cover", // Prevent swaying by ensuring the image fits
-          }}
+          sx={{ width: "100%", paddingTop: "56.25%" }}
         />
       </Link>
 
