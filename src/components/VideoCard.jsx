@@ -20,16 +20,27 @@ const VideoCard = ({
   const isSmallScreen = useMediaQuery("(max-width:600px)"); // Adjust the max-width as needed
   const cardWidth = isSmallScreen ? "100%" : "auto";
 
+  const cardStyle = {
+    margin: "auto",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    width: cardWidth,
+    overflow: "hidden", // Prevent horizontal scrolling
+  };
+
+  const contentStyle = {
+    backgroundColor: "#161e16",
+    padding: "16px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    height: "100%",
+    overflow: "hidden", // Prevent horizontal scrolling
+  };
+
   return (
-    <Card
-      sx={{
-        margin: "auto",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        width: cardWidth,
-      }}
-    >
+    <Card sx={cardStyle}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
@@ -38,16 +49,7 @@ const VideoCard = ({
         />
       </Link>
 
-      <CardContent
-        sx={{
-          backgroundColor: "#161e16",
-          padding: "16px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          height: "100%",
-        }}
-      >
+      <CardContent sx={contentStyle}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
           <Typography
             variant="subtitle1"
