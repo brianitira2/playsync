@@ -14,14 +14,13 @@ const Videos = ({ videos }) => {
   }, [videos]);
 
   if (isLoading) {
-   
     return <CircularProgress />;
   }
 
   return (
-    <Grid container spacing={1} >
+    <Grid container spacing={1}>
       {videos.map((item, index) => (
-        <Grid key={index}>
+        <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
           {item.id && item.id.videoId && <VideoCard video={item} />}
           {item.id && item.id.channelId && <ChannelCard channelDetail={item} />}
         </Grid>

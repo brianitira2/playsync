@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Typography, Card, CardContent, CardMedia } from "@mui/material";
+import { Typography, Card, CardContent, CardMedia, useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 
 import {
@@ -17,6 +17,9 @@ const VideoCard = ({
     snippet,
   },
 }) => {
+  const isSmallScreen = useMediaQuery("(max-width:600px)"); // Adjust the max-width as needed
+  const cardWidth = isSmallScreen ? "100%" : "auto";
+
   return (
     <Card
       sx={{
@@ -24,6 +27,7 @@ const VideoCard = ({
         height: "100%",
         display: "flex",
         flexDirection: "column",
+        width: cardWidth,
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>

@@ -19,7 +19,7 @@ const VideoDetail = () => {
   }, [id]);
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={2}>
       <Grid item xs={12} md={6}>
         <Box width="100%" maxWidth="800px" margin="0 auto">
           <ReactPlayer
