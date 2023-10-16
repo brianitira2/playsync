@@ -11,6 +11,9 @@ import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
+import FeedIcon from '@mui/icons-material/Feed';
+import SportsMmaIcon from '@mui/icons-material/SportsMma';
 
 
 
@@ -21,21 +24,22 @@ export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 export const categories = [
   { name: 'Trends', icon: <HomeIcon />, },
   { name: 'Hacking', icon: <CodeIcon />, },
-  { name: 'Fighting', icon: <CodeIcon />, },
+  { name: 'Fighting', icon: <SportsMmaIcon />, },
   { name: 'Computer Science', icon: <CodeIcon />, },
-  { name: 'Memes', icon: <CodeIcon />, },
+  { name: 'Memes', icon: <TheaterComedyIcon />, },
   { name: 'Beats', icon: <MusicNoteIcon /> },
-  { name: 'Trending Kenya', icon: <SchoolIcon />, },
+  { name: 'Trending Kenya', icon: <FeedIcon />, },
   { name: 'Tiktok Trends', icon: <GraphicEqIcon />, },
   { name: 'Films', icon: <OndemandVideoIcon />, },
   { name: 'ROG', icon: <SportsEsportsIcon />, },
   { name: 'Amapiano', icon: <LiveTvIcon />, },
-  { name: 'Football', icon: <FitnessCenterIcon />, },
+  { name: 'Football', icon: <SportsSoccerIcon/>, },
   { name: 'Fashion', icon: <CheckroomIcon />, },
-  { name: 'Latest Movies', icon: <FaceRetouchingNaturalIcon />, },
+  { name: 'Latest Movies', icon: <OndemandVideoIcon/>, },
   { name: 'Entertainment', icon: <TheaterComedyIcon />, },
   { name: 'Ass Shaking 🤤', icon: <FitnessCenterIcon />, },
-  { name: 'Trailers', icon: <DeveloperModeIcon />, },
+  { name: 'Trailers', icon: <OndemandVideoIcon />, },
+  
 ];
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';

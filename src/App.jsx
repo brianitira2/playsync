@@ -1,18 +1,21 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Box } from '@mui/material'
+import { Box} from '@mui/material'
 
 import Navbar from './components/Navbar'
 import Feed from './components/Feed'
 import SearchFeed from './components/SearchFeed'
 import VideoDetail from './components/VideoDetail'
 import ChannelDetail from './components/ChannelDetail'
+import CopyRight from './components/CopyRight'
 
 const App = () =>
  (
    <BrowserRouter>
    <Box sx={{backgroundColor: '#000'}}>
+  
     <Navbar/>
+  
 
     <Routes>
       <Route path= "/" exact element = {<Feed/>}/>
@@ -21,7 +24,13 @@ const App = () =>
       <Route path= "/search/:searchTerm" exact element = {<SearchFeed/>}/>
     </Routes>
 
+    <Box>
+   
+    </Box>
+
+   
    </Box>
+  
    </BrowserRouter>
   )
 
