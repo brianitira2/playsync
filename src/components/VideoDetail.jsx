@@ -21,11 +21,11 @@ const VideoDetail = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} md={6}>
-        <Box width="100%" maxWidth="800px" margin="0 auto">
+        <Box width="100%" maxWidth="900px" margin='0 auto' >
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${id}`}
             width="100%"
-            height="auto"
+            height="800px"
             controls={true}
             config={{
               youtube: {
