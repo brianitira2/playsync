@@ -34,8 +34,8 @@ export const categories = [
   { name: 'Fashion', icon: <CheckroomIcon />, },
   { name: 'Latest Movies', icon: <FaceRetouchingNaturalIcon />, },
   { name: 'Entertainment', icon: <TheaterComedyIcon />, },
-  { name: 'Ass Shaking', icon: <FitnessCenterIcon />, },
-  { name: 'Technology', icon: <DeveloperModeIcon />, },
+  { name: 'Ass Shaking 🤤', icon: <FitnessCenterIcon />, },
+  { name: 'Trailers', icon: <DeveloperModeIcon />, },
 ];
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
