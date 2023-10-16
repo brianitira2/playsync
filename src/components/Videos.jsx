@@ -21,7 +21,7 @@ const Videos = ({ videos }) => {
   return (
     <Grid container spacing={1} >
       {videos.map((item, index) => (
-        <Grid item xs={12} md={6} lg={3} key={index}>
+        <Grid key={index}>
           {item.id && item.id.videoId && <VideoCard video={item} />}
           {item.id && item.id.channelId && <ChannelCard channelDetail={item} />}
         </Grid>
