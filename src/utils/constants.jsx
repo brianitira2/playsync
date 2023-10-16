@@ -37,7 +37,7 @@ export const categories = [
   { name: 'Fashion', icon: <CheckroomIcon />, },
   { name: 'Latest Movies', icon: <OndemandVideoIcon/>, },
   { name: 'Entertainment', icon: <TheaterComedyIcon />, },
-  { name: 'Ass Shaking 🤤', icon: <FitnessCenterIcon />, },
+  { name: 'Ass Shaking 🤤', icon: <TheaterComedyIcon  />, },
   { name: 'Trailers', icon: <OndemandVideoIcon />, },
   
 ];
